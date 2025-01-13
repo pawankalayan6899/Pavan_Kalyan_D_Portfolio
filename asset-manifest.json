@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Pavan_Kalyan_D_Portfolio/static/css/main.114bd00b.css",
+    "main.css": "/Pavan_Kalyan_D_Portfolio/static/css/main.0531e6ca.css",
     "main.js": "/Pavan_Kalyan_D_Portfolio/static/js/main.adb4251b.js",
     "static/js/488.21a3b654.chunk.js": "/Pavan_Kalyan_D_Portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/react.png": "/Pavan_Kalyan_D_Portfolio/static/media/react.7b8b68871aafb89b1d9f.png",
@@ -16,12 +16,12 @@
     "static/media/css.webp": "/Pavan_Kalyan_D_Portfolio/static/media/css.d9b6c58684147dfa28f2.webp",
     "static/media/debugging.png": "/Pavan_Kalyan_D_Portfolio/static/media/debugging.feff2949b050c0afa0ea.png",
     "index.html": "/Pavan_Kalyan_D_Portfolio/index.html",
-    "main.114bd00b.css.map": "/Pavan_Kalyan_D_Portfolio/static/css/main.114bd00b.css.map",
+    "main.0531e6ca.css.map": "/Pavan_Kalyan_D_Portfolio/static/css/main.0531e6ca.css.map",
     "main.adb4251b.js.map": "/Pavan_Kalyan_D_Portfolio/static/js/main.adb4251b.js.map",
     "488.21a3b654.chunk.js.map": "/Pavan_Kalyan_D_Portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.114bd00b.css",
+    "static/css/main.0531e6ca.css",
     "static/js/main.adb4251b.js"
   ]
 }
