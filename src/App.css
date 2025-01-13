@@ -29,7 +29,7 @@
   }
 
   .mobile-menu-toggle {
-      display: flex;
+      display: center;
   }
 }
 
@@ -148,7 +148,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 3px;
   position: relative;
 }
 
@@ -231,6 +231,11 @@
   font-size: 2.5em;
   opacity: 0;
   animation: fadeIn 2s forwards; /* Add fade-in animation to the entire section */
+}
+
+/* For parallax effect on larger screens */
+#skills{
+  background-attachment: fixed;
 }
 
 /* Fade In Animation for Section */
@@ -349,15 +354,14 @@ li strong {
 }
 
 
-
 /* Projects Section */
 #projects {
   background-color: #333333; /* Charcoal Black */
   padding: 100px 20px;
-  color: white; /* Dark Yellow */
-  font-family: 'Times New Roman', Times, serif; /* Use Times New Roman here */
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
   text-align: justify;
-  
+  line-height: 1.5; /* Adjust line spacing for paragraphs */
 }
 
 .project-grid {
@@ -392,13 +396,30 @@ li strong {
 .project-title {
   font-size: 1.5rem;
   color: #FFD700; /* Dark Yellow */
-  
+  margin-bottom: 10px; /* Adjust title spacing */
 }
 
 .project-description {
   font-size: 1rem;
   color: #FFFFFF; /* White */
+  margin-bottom: 10px; /* Adjust paragraph spacing */
+  line-height: 1.4; /* Reduce line spacing */
 }
+
+.project-details {
+  font-family: 'Times New Roman', Times, serif; /* Use Times New Roman here */
+  word-spacing: normal;
+  font-size: 1rem; /* Standard readable font size */
+  color: #FFFFFF; /* White text color */
+  line-height: 1.6; /* Consistent spacing between lines */
+  margin: 0; /* Remove unnecessary margins */
+  padding: 0; /* Add padding for better spacing */
+}
+
+
+
+
+
 
 .project-link {
   display: inline-block;
@@ -417,6 +438,7 @@ li strong {
   color: #333333; /* Charcoal Black */
 }
 
+
 /* Work Experience Section */
 #experience {
   background-color: #333333; /* Charcoal Black fallback */
@@ -425,6 +447,11 @@ li strong {
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; /* Centers the background image */
   background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+
+/* For parallax effect on larger screens */
+#experience {
+  background-attachment: fixed;
 }
 
 .experience-item {
@@ -509,4 +536,74 @@ li strong {
   text-align: center;
   font-size: 0.9rem;
   font-family: 'Rubik Vinyl', serif;
+}
+
+
+
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+/* General section styles */
+.section {
+    padding: 30px 30px;
+    text-align: center;
+    background-color: #121212;
+    color: cyan;
+    font-family: 'Rubik Vinyl', serif;
+}
+
+/* Global text styles */
+body {
+    font-family: 'Rubik Vinyl', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px 10px; /* Reduced padding on smaller screens */
+    }
+
+    .welcome-title {
+        font-size: 3.5rem; /* Adjust title size */
+        margin-top: 10px;
+    }
+
+    .name-title {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .subtext {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+    
+    .download-cv-btn .button {
+        padding: 8px 15px; /* Adjust button size */
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-title {
+        font-size: 2.5rem; /* Further adjust title for very small screens */
+    }
+
+    .name-title {
+        font-size: 2rem;
+    }
+
+    .subtext {
+        font-size: 1rem;
+    }
+
+    .download-cv-btn .button {
+        padding: 6px 12px; /* Button adjustment */
+        font-size: 12px;
+    }
+}
+
+/* Optional: Smooth scrolling for page navigation */
+html {
+    scroll-behavior: smooth;
 }

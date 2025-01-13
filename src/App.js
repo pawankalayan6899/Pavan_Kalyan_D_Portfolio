@@ -61,7 +61,7 @@ export default function App() {
                     <a href="#skills" className="nav-link">Skills</a>
                     <a href="#projects" className="nav-link">Projects</a>
                     <a href="#experience" className="nav-link">Experience</a>
-                    <a href="#contact" className="nav-link">Contact</a>
+                    <a href="#contact" className="nav-link">Contact Me</a>
                 </div>
             </nav>
 
@@ -182,9 +182,9 @@ export default function App() {
         <div className="project-card">
             <img src="https://placehold.co/400x250?text=Equipment+Maintenance+System" alt="Equipment Maintenance System" className="project-image" />
             <div className="project-info">
-                <h3 className="project-title">1. Equipment Maintenance System</h3>
+                <h3 className="project-title">1.Equipment Maintenance System</h3>
                 <p className="project-description" style={{ color: 'deepskyblue' }}>
-                    Client: Sumitomo Chemical, Bengaluru, KA
+                    Client: Sumitomo Chemical
                     <br />
                     Skills: ReactJS, Redux, Axios, RESTful APIs, HTML5, CSS3
                 </p>
@@ -206,25 +206,27 @@ export default function App() {
         <div className="project-card">
             <img src="https://placehold.co/400x250?text=Mint+Payments+Application" alt="Mint Payments Application" className="project-image" />
             <div className="project-info">
-                <h3 className="project-title">2. Mint Payments Application</h3>
+                <h3 className="project-title">2.Mint Payments Application</h3>
                 <p className="project-description" style={{ color: 'deepskyblue' }}>
-                    Client: Mint Payments, Bengaluru, KA
+                    Client: Mint Payments
                     <br />
                     Skills: React.js, JavaScript, HTML5, CSS3
                 </p>
                 <p className="project-details">
-                    • Coordinated closely with the Team Lead to gather and analyze requirements, ensuring alignment with project goals.
-                    <br />
-                    • Developed user interfaces for both mobile platforms, ensuring a consistent and responsive user experience.
-                    <br />
-                    • Integrated frontend with the application’s business layer, ensuring seamless communication between frontend and backend.
-                    <br />
-                    • Worked with UI and database development teams to create a dynamic user experience.
-                    <br />
-                    • Troubleshot and resolved issues, ensuring website functionality and compatibility across platforms.
-                    <br />
-                    • Updated software to ensure full functional compatibility, keeping the application up-to-date with the latest standards and technologies.
-                </p>
+  • Coordinated closely with the Team Lead to gather and analyze requirements, ensuring alignment with project goals.
+  <br />
+  • Developed user interfaces for both mobile platforms, ensuring a consistent and responsive user experience.
+  <br />
+  • Integrated frontend with the application’s business layer, ensuring seamless communication between frontend and backend.
+  <br />
+  • Worked with UI and database development teams to create a dynamic user experience.
+  <br />
+  • Troubleshot and resolved issues, ensuring website functionality and compatibility across platforms.
+  <br />
+  • Updated software to ensure full functional compatibility, keeping the application up-to-date with the latest standards and technologies.
+</p>
+
+
             </div>
         </div>
     </div>
