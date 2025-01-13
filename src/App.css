@@ -1,135 +1,263 @@
-/* Mobile Styles */
-.mobile-menu-toggle {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-  background: transparent;
-  border: none;
-  padding: 0;
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+/* General section styles */
+.section {
+    padding: 30px 30px;
+    text-align: center;
+    background-color: #121212; 
+    color: cyan; /* Light Gray */
+    font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */
 }
 
-.mobile-menu-toggle .bar {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
+/* Home Section Specific Styles */
+#home {
+    background-image: url('./assets/hf1.jpeg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    height: 100vh; /* Full height of the viewport */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    color: yellow; /* Change text color for better contrast on the background */
+    font-size: 1.2rem;
+    background-attachment: fixed; /* For parallax effect */
 }
 
-/* For mobile screens */
+/* Welcome Section */
+.welcome-title {
+    font-size: 4.5rem; /* Set font size */
+    color: white; /* Color for welcome title */
+    margin-top: -200px; /* Move the title up (adjust this value as needed) */
+    margin-bottom: 20px; /* Space below the welcome title */
+    font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */
+    font-Size: '2.5em';
+}
+
+.name-title {
+    font-size: 3.7rem; /* Set font size to match welcome title */
+    color: cyan; /* Color for the name title */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Reset margin */
+    font-family: 'Papyrus', fantasy; /* Use Papyrus font here */
+}
+
+.subtext {
+    font-size: 1.4rem; /* Font size for subtext */
+    color: white; /* Light Gray */
+    margin-top: 20px; /* Margin above the subtext */
+    font-family: 'Papyrus', fantasy; /* Use Papyrus font here */
+}
+
+/* Button Styles for CV Download */
+.download-cv-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.download-cv-btn .button {
+    background-color: dodgerblue; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv-btn .button:hover {
+    background-color: gold;
+}
+
+/* Make sections fit the screen */
+#experience, #contact, #about, #skills {
+    height: 100vh; /* Ensures the section covers the entire screen */
+    padding: 20px;
+    background-color: #121212;
+    color: whitesmoke;
+    font-family: 'Times New Roman', serif;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    flex-direction: column; /* Ensures content is in column layout */
+}
+
+#experience {
+    background-image: url('assets/workexpierence-new.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#experience {
+  background-attachment: fixed;
+}
+
+
+#contact {
+    background-color: #333333; /* Or any other color */
+    font-family: 'Rubik Vinyl', serif;
+    color: cyan;
+    font-size: 1.8rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input, .form-textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button {
+    padding: 10px;
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #00bcd4;
+}
+
+/* Optional: Smooth scrolling for page navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile responsiveness for home section */
 @media (max-width: 768px) {
-  .nav-links {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-  }
+    #home {
+        height: 100vh; /* Ensure full height */
+        background-size: cover;
+        background-position: center; /* Keep background centered */
+    }
 
-  .nav-links.show {
-      display: flex;
-  }
+    .welcome-title {
+        font-size: 3.5rem; /* Adjust font size */
+    }
 
-  .mobile-menu-toggle {
-      display: center;
-  }
+    .name-title {
+        font-size: 2.5rem; /* Adjust font size */
+    }
 }
 
+@media (max-width: 480px) {
+    #home {
+        height: 100vh; /* Full height on small devices */
+        background-size: cover;
+        background-position: center; /* Keep background centered */
+    }
 
+    .welcome-title {
+        font-size: 2.5rem; /* Further adjust font size */
+        text-align: center;
+    }
 
+    .name-title {
+        font-size: 2rem;
+    }
 
+    .subtext {
+        font-size: 1rem;
+    }
+}
 
+/* General Styles for Social Icons */
+.social-icons {
+    display: center;
+    gap: 30px; /* Spacing between icons */
+}
 
+/* Default color for each social icon (using FontAwesome default colors) */
+.social-icons a {
+    font-size: 3rem; /* Set the size of the icons */
+    color: inherit; /* Inherit the default color for each icon */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
 
+/* Specific colors for each social icon */
+.social-icons .facebook {
+    color: #1877f2; /* Facebook blue */
+}
 
+.social-icons .instagram {
+    color: #c13584; /* Instagram purple */
+}
 
+.social-icons .linkedin {
+    color: #0077b5; /* LinkedIn blue */
+}
 
+.social-icons .github {
+    color: #333; /* GitHub black */
+}
 
+.social-icons .whatsapp {
+    color: #25d366; /* WhatsApp green */
+}
 
-
-
+/* Hover effect to change color to gold */
+.social-icons a:hover {
+    color: gold; /* Change color to gold when hovered */
+}
 
 /* Navbar Styling */
-
-
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 3px 0.1px;
-  background: rgba(51, 51, 51, 0.9); /* Charcoal Black */
-  z-index: 1000;
-  transition: background 0.3s ease-in-out;
-  font-family: 'Papyrus', fantasy; /* Use Rubik Vinyl font here */
-  font-weight: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0.1px;
+    background: rgba(51, 51, 51, 0.9); /* Charcoal Black */
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+    font-family: 'Papyrus', fantasy; /* Use Papyrus font here */
+    font-weight: 100;
 }
 
 .navbar.scrolled {
-  background: #333333; /* Charcoal Black */
+    background: #333333; /* Charcoal Black */
 }
 
 .navbar img.logo {
-  height: 50px;
+    height: 50px;
 }
 
 .nav-links {
-  display: flex;
-  gap: 40px;
+    display: flex;
+    gap: 40px;
 }
 
 .nav-link {
-  text-decoration: none;
-  color: cyan; /* Dark Yellow */
-  font-weight: bold;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: cyan; /* Dark Yellow */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #FFFFFF; /* White */
+    color: #FFFFFF; /* White */
 }
 
-
-
-.social-icons {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+#home {
+  background-attachment: fixed;
 }
 
-.social-icons a {
-  font-size: 2.5rem;
-  color: #333; /* Default color (you can modify as per your design) */
-  transition: color 0.3s, text-shadow 0.3s; /* Added transition for text-shadow */
-}
-
-/* Original colors for the icons */
-.social-icons a.facebook {
-  color: #1877f2; /* Facebook blue */
-}
-
-.social-icons a.instagram {
-  color: #e4405f; /* Instagram purple */
-}
-
-.social-icons a.linkedin {
-  color: #0077b5; /* LinkedIn blue */
-}
-
-.social-icons a.github {
-  color: #333; /* Default GitHub color (black) */
-}
-
-.social-icons a.whatsapp {
-  color: #25d366; /* WhatsApp green */
-}
-
-/* Change to gold on hover with glow effect */
-.social-icons a:hover {
-  color: gold !important; /* On hover color */
-  text-shadow: 0 0 8px gold, 0 0 15px gold; /* Glow effect */
-}
 
 /* About Section */
 #about {
@@ -137,13 +265,13 @@
   padding: 80px 20px;
   color: #FFD700; /* Dark Yellow */
   text-align: center;
+  font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */
 }
-
 .about-box {
   max-width: 900px;
   margin: 0 auto;
-  padding: 25px;
-  background: #444444; /* Slightly lighter Charcoal Black */
+  padding: 5px; /* Reduce padding */
+  background: #444444;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -151,6 +279,7 @@
   gap: 3px;
   position: relative;
 }
+
 
 .about-box h2 {
   font-size: 2.5rem;
@@ -222,388 +351,248 @@
 
 /* Skills Section */
 #skills {
-  background-color: #333333; /* Charcoal Black */
-  padding: 100px 20px;
-  display: flex; /* Flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column; /* Stack child elements vertically */
-  font-size: 2.5em;
-  opacity: 0;
-  animation: fadeIn 2s forwards; /* Add fade-in animation to the entire section */
+    background-color: #333333; /* Charcoal Black */
+    padding: 100px 20px;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack child elements vertically */
+    font-size: 2.5em;
+    height: 100vh; /* Full height to ensure it fits the screen */
+    box-sizing: border-box; /* Ensures padding is included in height calculation */
 }
 
-/* For parallax effect on larger screens */
-#skills{
-  background-attachment: fixed;
-}
-
-/* Fade In Animation for Section */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Adjusted header styles */
 .skills-box h2 {
-  font-size: 2.5rem; /* Increase font size as needed (e.g. 3rem) */
-  margin-bottom: 20px;
-  color: cyan; /* Dark Yellow */
-  text-align: center;
-  font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */
-  animation: bounceIn 1s ease-out; /* Add bounce-in animation to the header */
-}
-
-/* Bounce-In Animation */
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+    font-size: 2.5rem; /* Increase font size */
+    margin-bottom: 20px;
+    color: cyan; /* Cyan */
+    text-align: center;
+    font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */
 }
 
 .skills-box ul {
-  padding-left: 150px;
-  text-align: left;
-  font-family: 'Times New Roman', Times, serif; /* Use Times New Roman here */
-  opacity: 0;
-  animation: fadeInText 1.5s ease-out 0.5s forwards; /* Fade-in effect for skill list */
-}
-
-/* Fade-In Text Animation */
-@keyframes fadeInText {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    padding-left: 150px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif; /* Use Times New Roman here */
 }
 
 .skills-box ul li {
-  font-size: 1rem;
-  color: #FFFFFF; /* White */
-  margin-bottom: 10px;
-  opacity: 0;
-  animation: fadeInText 1s ease-out forwards; /* Fade-in for each skill item */
-  animation-delay: 0.5s; /* Delay for each item */
-  
+    font-size: 1rem;
+    color: #FFFFFF; /* White */
+    margin-bottom: 10px;
 }
-
-li strong {
-  color: #FFD700; /* Gold color */
-}
-
 
 /* Image Container Adjustments */
 .image-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 45px;
-  margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+    margin-bottom: 20px;
 }
 
-/* Images */
+/* Image Bubble Effect */
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .img-wrapper img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%; /* Complete circle */
-  border: 2px solid #FFD700; /* Gold color border */
-  animation: bubbleEffect 2s infinite ease-in-out; /* Continuous bubble effect */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Complete circle */
+    border: 2px solid #FFD700; /* Gold color border */
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Glow effect for bubble */
 }
 
-/* Bubble Effect Keyframes */
-@keyframes bubbleEffect {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-10px) scale(1.05);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
+/* Hover Bubble Effect */
+.img-wrapper img:hover {
+    opacity: 0.8;
+    transform: scale(1.1); /* Slightly larger */
+    box-shadow: 0 0 30px rgba(255, 215, 0, 1); /* Intense glow on hover */
 }
 
-/* Skills Section Visibility */
-#skills.visible {
-  opacity: 1;
-  animation: fadeIn 2s forwards;
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    #skills {
+        padding: 80px 10px;
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .skills-box h2 {
+        font-size: 2rem; /* Adjust font size for the heading */
+    }
+
+    .skills-box ul {
+        padding-left: 100px; /* Adjust list padding */
+    }
+
+    .image-container {
+        gap: 30px; /* Reduce gap between images */
+    }
+
+    .img-wrapper img {
+        width: 70px;
+        height: 70px; /* Adjust size for smaller screens */
+    }
 }
 
-/* Heading Animation */
-.h2-visible {
-  animation: bounceIn 1s ease-out;
-}
+/* For mobile devices */
+@media (max-width: 480px) {
+    #skills {
+        padding: 60px 10px;
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
 
-/* Skill List Items Animation */
-.bounce-in {
-  animation: fadeInText 1s ease-out forwards;
-}
+    .skills-box h2 {
+        font-size: 1.8rem; /* Adjust font size for the heading */
+    }
 
+    .skills-box ul {
+        padding-left: 20px; /* Adjust list padding */
+    }
+
+    .image-container {
+        gap: 20px; /* Reduce gap for mobile */
+    }
+
+    .img-wrapper img {
+        width: 50px;
+        height: 50px; /* Further adjust image size for mobile */
+    }
+}
 
 /* Projects Section */
 #projects {
-  background-color: #333333; /* Charcoal Black */
-  padding: 100px 20px;
-  color: white;
-  font-family: 'Times New Roman', Times, serif;
-  text-align: justify;
-  line-height: 1.5; /* Adjust line spacing for paragraphs */
+    background-color: #333333; /* Charcoal Black */
+    padding: 100px 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    line-height: 1.5; /* Adjust line spacing for paragraphs */
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .project-card {
-  background: #444444; /* Slightly lighter Charcoal Black */
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    background: #444444; /* Slightly lighter Charcoal Black */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
 }
 
 .project-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .project-info {
-  padding: 15px;
+    padding: 15px;
 }
 
 .project-title {
-  font-size: 1.5rem;
-  color: #FFD700; /* Dark Yellow */
-  margin-bottom: 10px; /* Adjust title spacing */
+    font-size: 1.5rem;
+    color: #FFD700; /* Dark Yellow */
+    margin-bottom: 10px; /* Adjust title spacing */
 }
 
 .project-description {
-  font-size: 1rem;
-  color: #FFFFFF; /* White */
-  margin-bottom: 10px; /* Adjust paragraph spacing */
-  line-height: 1.4; /* Reduce line spacing */
+    font-size: 1rem;
+    color: #FFFFFF; /* White */
+    margin-bottom: 10px; /* Adjust paragraph spacing */
+    line-height: 1.4; /* Reduce line spacing */
 }
 
 .project-details {
-  font-family: 'Times New Roman', Times, serif; /* Use Times New Roman here */
-  word-spacing: normal;
-  font-size: 1rem; /* Standard readable font size */
-  color: #FFFFFF; /* White text color */
-  line-height: 1.6; /* Consistent spacing between lines */
-  margin: 0; /* Remove unnecessary margins */
-  padding: 0; /* Add padding for better spacing */
+    font-family: 'Times New Roman', Times, serif; /* Use Times New Roman here */
+    word-spacing: normal;
+    font-size: 1rem; /* Standard readable font size */
+    color: #FFFFFF; /* White text color */
+    line-height: 1.6; /* Consistent spacing between lines */
+    margin: 0; /* Remove unnecessary margins */
+    padding: 0; /* Add padding for better spacing */
 }
 
-
-
-
-
-
 .project-link {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 15px;
-  background-color: #FFFFFF; /* White */
-  color: #333333; /* Charcoal Black */
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #FFFFFF; /* White */
+    color: #333333; /* Charcoal Black */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .project-link:hover {
-  background-color: #FFD700; /* Dark Yellow */
-  color: #333333; /* Charcoal Black */
+    background-color: #FFD700; /* Dark Yellow */
+    color: #333333; /* Charcoal Black */
 }
-
-
-/* Work Experience Section */
-#experience {
-  background-color: #333333; /* Charcoal Black fallback */
-  padding: 100px 20px;
-  background-image: url('assets/workexpierence-new.jpeg'); /* Add your image path here */
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center; /* Centers the background image */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
-}
-
-/* For parallax effect on larger screens */
-#experience {
-  background-attachment: fixed;
-}
-
-.experience-item {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background: rgba(68, 68, 68, 0.8); /* Adjust this for a slightly transparent background */
-  /* Slightly lighter Charcoal Black */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.experience-item h3 {
-  font-size: 1.5rem;
-  color: white; /* Dark Yellow */
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.experience-item p, .experience-item ul {
-  font-size: 1rem;
-  color: #FFFFFF; /* White */
-  font-family: 'Times New Roman', Times, serif;
-}
-
-
-
-
-
-
-
-
-
 
 /* Contact Section */
 #contact {
-  background-color: #333333; /* Charcoal Black */
-  padding: 100px 20px;
-  color: #FFD700; /* Dark Yellow */
+    background-color: #333333; /* Charcoal Black */
+    padding: 100px 20px;
+    color: cyan; /* Dark Yellow */
 }
 
 .contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .form-input, .form-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #FFFFFF; /* White */
-  border-radius: 5px;
-  background-color: #444444; /* Slightly lighter Charcoal Black */
-  color: #FFD700; /* Dark Yellow */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #FFFFFF; /* White */
+    border-radius: 5px;
+    background-color: #444444; /* Slightly lighter Charcoal Black */
+    color: #FFD700; /* Dark Yellow */
 }
 
 .form-input:focus, .form-textarea:focus {
-  outline: none;
-  border-color: #FFD700; /* Dark Yellow */
+    outline: none;
+    border-color: #FFD700; /* Dark Yellow */
 }
 
 .button {
-  background-color: #FFFFFF; /* White */
-  color: #333333; /* Charcoal Black */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+    background-color: #FFFFFF; /* White */
+    color: #333333; /* Charcoal Black */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .button:hover {
-  background-color: #FFD700; /* Dark Yellow */
-  color: #333333; /* Charcoal Black */
+    background-color: #FFD700; /* Dark Yellow */
+    color: #333333; /* Charcoal Black */
 }
 
 /* Footer */
 .footer {
-  background-color: #333333; /* Charcoal Black */
-  color: #FFD700; /* Dark Yellow */
-  padding: 20px 0;
-  text-align: center;
-  font-size: 0.9rem;
-  font-family: 'Rubik Vinyl', serif;
-}
-
-
-
-/* Importing Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
-
-/* General section styles */
-.section {
-    padding: 30px 30px;
+    background-color: #333333; /* Charcoal Black */
+    color: #FFD700; /* Dark Yellow */
+    padding: 20px 0;
     text-align: center;
-    background-color: #121212;
-    color: cyan;
+    font-size: 0.9rem;
     font-family: 'Rubik Vinyl', serif;
-}
-
-/* Global text styles */
-body {
-    font-family: 'Rubik Vinyl', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Responsive design for smaller devices */
-@media (max-width: 768px) {
-    .section {
-        padding: 20px 10px; /* Reduced padding on smaller screens */
-    }
-
-    .welcome-title {
-        font-size: 3.5rem; /* Adjust title size */
-        margin-top: 10px;
-    }
-
-    .name-title {
-        font-size: 2.5rem; /* Adjust font size */
-    }
-
-    .subtext {
-        font-size: 1.2rem; /* Adjust font size */
-    }
-    
-    .download-cv-btn .button {
-        padding: 8px 15px; /* Adjust button size */
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .welcome-title {
-        font-size: 2.5rem; /* Further adjust title for very small screens */
-    }
-
-    .name-title {
-        font-size: 2rem;
-    }
-
-    .subtext {
-        font-size: 1rem;
-    }
-
-    .download-cv-btn .button {
-        padding: 6px 12px; /* Button adjustment */
-        font-size: 12px;
-    }
-}
-
-/* Optional: Smooth scrolling for page navigation */
-html {
-    scroll-behavior: smooth;
 }
