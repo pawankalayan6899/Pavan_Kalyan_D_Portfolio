@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Pavan_Kalyan_D_Portfolio/static/css/main.1e108e5c.css",
+    "main.js": "/Pavan_Kalyan_D_Portfolio/static/js/main.3952b0b1.js",
+    "static/js/488.21a3b654.chunk.js": "/Pavan_Kalyan_D_Portfolio/static/js/488.21a3b654.chunk.js",
+    "static/media/react.png": "/Pavan_Kalyan_D_Portfolio/static/media/react.7b8b68871aafb89b1d9f.png",
+    "static/media/hf1.jpeg": "/Pavan_Kalyan_D_Portfolio/static/media/hf1.214ab6b7d1cd53f5bf4a.jpeg",
+    "static/media/github-logo.png": "/Pavan_Kalyan_D_Portfolio/static/media/github-logo.febde99a80c92dee7df0.png",
+    "static/media/javascript.png": "/Pavan_Kalyan_D_Portfolio/static/media/javascript.15793fbbae43bddb2509.png",
+    "static/media/workexpierence-new.jpeg": "/Pavan_Kalyan_D_Portfolio/static/media/workexpierence-new.b52c9b770f80a5c750a0.jpeg",
+    "static/media/fetch api.png": "/Pavan_Kalyan_D_Portfolio/static/media/fetch api.2e4a07ee99f9b85c5145.png",
+    "static/media/wmremove-transformed.jpeg": "/Pavan_Kalyan_D_Portfolio/static/media/wmremove-transformed.0e7923ae7f9717eaee74.jpeg",
+    "static/media/responsive.jpg": "/Pavan_Kalyan_D_Portfolio/static/media/responsive.16200fa18267b51af4cc.jpg",
+    "static/media/problem solving.jpg": "/Pavan_Kalyan_D_Portfolio/static/media/problem solving.848f9d6f107bc6f4bc6f.jpg",
+    "static/media/htmlnew.webp": "/Pavan_Kalyan_D_Portfolio/static/media/htmlnew.56623acb224563e5784f.webp",
+    "static/media/css.webp": "/Pavan_Kalyan_D_Portfolio/static/media/css.d9b6c58684147dfa28f2.webp",
+    "static/media/debugging.png": "/Pavan_Kalyan_D_Portfolio/static/media/debugging.feff2949b050c0afa0ea.png",
+    "index.html": "/Pavan_Kalyan_D_Portfolio/index.html",
+    "main.1e108e5c.css.map": "/Pavan_Kalyan_D_Portfolio/static/css/main.1e108e5c.css.map",
+    "main.3952b0b1.js.map": "/Pavan_Kalyan_D_Portfolio/static/js/main.3952b0b1.js.map",
+    "488.21a3b654.chunk.js.map": "/Pavan_Kalyan_D_Portfolio/static/js/488.21a3b654.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e108e5c.css",
+    "static/js/main.3952b0b1.js"
+  ]
+}
