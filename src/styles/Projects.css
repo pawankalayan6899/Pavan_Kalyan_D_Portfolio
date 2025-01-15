@@ -1,0 +1,166 @@
+/* Projects Section */
+.projects-section {
+    
+    padding: 100px 20px;
+    color: white;
+    font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */  
+    text-align: justify;
+    line-height: 1.5; /* Adjust line spacing for paragraphs */
+    display: flex;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    min-height: 100vh; /* Ensure the section takes up the full viewport height */
+    box-sizing: border-box; /* Include padding in height calculation */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+.projects-container {
+    max-width: 1200px;
+    width: 100%; /* Ensure the container takes up the full width */
+    margin: 0 auto; /* Center the container */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.projects-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: cyan;
+    
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid layout */
+    gap: 80px; /* Spacing between grid items */
+    
+    max-width: 1200px; /* Limit the grid width for better readability */
+    margin: 0 auto; /* Center the grid within its container */
+    padding: 0 20px; /* Add padding to prevent content from touching edges */
+}
+
+.project-card {
+    background: #444444; /* Slightly lighter Charcoal Black */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align content horizontally */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add padding inside the card */
+    position: relative;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, cyan, magenta);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.project-card:hover::before {
+    opacity: 0.3; /* Gradient overlay on hover */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: #FFD700; /* Dark Yellow */
+    margin-bottom: 10px; /* Adjust title spacing */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.project-client,
+.project-skills {
+    font-size: 1.1rem;
+    color: #FFD700; /* Dark Yellow */
+    margin-bottom: 10px; /* Adjust spacing */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #e0e0e0; /* Light Gray */
+    line-height: 1.6; /* Consistent spacing between lines */
+    text-align: left; /* Align description text to the left */
+    width: 100%; /* Ensure the description takes up the full width */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.project-description ul {
+    list-style-type: disc; /* Add bullet points to the list */
+    padding-left: 20px; /* Add padding to align bullet points */
+    margin: 0; /* Remove default margin */
+}
+
+.project-description li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.project-description li:hover {
+    transform: translateX(10px); /* Move list item on hover */
+    color: cyan; /* Change text color on hover */
+}
+
+/* Framer Motion Animations */
+.motion-title {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.motion-card {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Responsive Design for Mobile and Smaller Screens */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 50px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .projects-title {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+        margin-bottom: 20px; /* Reduce margin for smaller screens */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack grid items in a single column */
+        gap: 80px; /* Reduce gap between items */
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    .project-card {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .project-title {
+        font-size: 1.2rem; /* Reduce font size for smaller screens */
+    }
+
+    .project-client,
+    .project-skills {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+
+    .project-description {
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+}

@@ -1,0 +1,189 @@
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    color: white;
+    font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */  
+    position: relative;
+    overflow: hidden; /* Ensure no overflow issues */
+  }
+  
+  /* Container */
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1; /* Ensure content is above any background */
+  }
+  
+  /* Title */
+  .contact-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: cyan;
+  }
+  
+  /* Two-Column Layout */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 50px; /* Space between columns */
+  }
+  
+  /* Contact Info Section (Left Column) */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .contact-info-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dbeafe; /* Light blue background */
+    border-radius: 50%;
+    transition: background-color 0.3s ease; /* Added transition for hover */
+  }
+  
+  .contact-info-icon:hover {
+    background-color: #cbd5e1; /* Slightly darker on hover */
+  }
+  
+  .contact-info-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #3b82f6; /* Blue icon color */
+  }
+  
+  .contact-info h3 {
+    color: gold; /* Gold color for the heading */
+    font-size: 2rem; /* Adjust font size if needed */
+    font-weight: 600; /* Adjust font weight if needed */
+    margin-bottom: 20px; /* Add spacing below the heading */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .contact-info-text h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: gold;
+  }
+  
+  .contact-info-text a,
+  .contact-info-text p {
+    font-size: 1rem;
+    color: white; /* Gray text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .contact-info-text a:hover {
+    color: #3b82f6; /* Blue text on hover */
+  }
+  
+  /* Form (Right Column) */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white; /* Dark gray text */
+    background-color: #ffffff; /* White background */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: #3b82f6; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Slightly softer blue shadow on focus */
+  }
+  
+  .form-textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    padding: 12px 24px;
+    background-color: #3b82f6; /* Blue background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition for scale effect */
+  }
+  
+  .submit-button:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slightly lift button on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 40px 10px;
+    }
+  
+    .contact-grid {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+      gap: 20px;
+    }
+  
+    .contact-title {
+      font-size: 2rem;
+    }
+  
+    .contact-info {
+      gap: 16px;
+    }
+  
+    .contact-info-item {
+      gap: 12px;
+    }
+  
+    .contact-info-icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .contact-info-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .contact-info-text h4 {
+      font-size: 1rem;
+    }
+  
+    .contact-info-text a,
+    .contact-info-text p {
+      font-size: 0.875rem;
+    }
+  }

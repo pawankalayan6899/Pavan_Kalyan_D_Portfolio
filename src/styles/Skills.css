@@ -1,0 +1,93 @@
+/* Skills Section */
+.skills-section {
+    padding: 80px 20px;
+    
+    color: white;
+    min-height: 100vh; /* Ensure the section fits the screen height */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+  }
+  
+  .skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* Ensure the container takes full width */
+  }
+  
+  .skills-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: cyan;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 25px; /* Spacing between items */
+  }
+  
+  .skill-card {
+    background-color: #444444;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 200px; /* Limit the maximum width of each card */
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(237, 249, 11, 0.4);
+  }
+  
+  .skill-image {
+    width: 100px; /* Fixed size for the image */
+    height: 100px; /* Fixed size for the image */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    margin-bottom: 10px;
+    border: 2px solid white; /* Adds a border around the image */
+  }
+  
+  .skill-name {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .skill-card {
+      flex: 1 1 120px; /* Adjust flex for smaller screens */
+      max-width: 150px; /* Adjust max-width for smaller screens */
+    }
+  
+    .skill-image {
+      width: 80px; /* Smaller size for tablets */
+      height: 80px; /* Smaller size for tablets */
+    }
+  
+    .skill-name {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skill-card {
+      flex: 1 1 100px; /* Adjust flex for mobile */
+      max-width: 120px; /* Adjust max-width for mobile */
+    }
+  
+    .skill-image {
+      width: 60px; /* Smaller size for mobile */
+      height: 60px; /* Smaller size for mobile */
+    }
+  
+    .skill-name {
+      font-size: 0.9rem;
+    }
+  }

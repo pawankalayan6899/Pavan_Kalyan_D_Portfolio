@@ -1,0 +1,149 @@
+.experience-section {
+    padding: 80px 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Fit to screen height */
+    min-height: 100vh; /* Ensure it takes at least the full screen height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+ 
+  
+  .experience-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 20px; /* Add padding for better spacing on smaller screens */
+  }
+  
+  .experience-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: cyan;
+  }
+  
+  .experience-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.4);
+  }
+  
+  .company-name,
+  .designation,
+  .duration {
+    color: yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .company-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .designation {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .duration {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .project-item {
+    background-color: rgba(85, 85, 85, 0.8); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+  }
+  
+  .project-title {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .project-client {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .project-duration {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  /* Responsive Design for Mobile and Smaller Screens */
+  @media (max-width: 768px) {
+    .experience-section {
+      padding: 40px 10px; /* Reduce padding for smaller screens */
+      height: auto; /* Allow the section to grow based on content */
+      min-height: 100vh; /* Ensure it takes at least the full screen height */
+    }
+  
+    .experience-title {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr; /* Stack projects in a single column on smaller screens */
+      gap: 10px; /* Reduce gap between items */
+    }
+  
+    .project-item {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .company-name {
+      font-size: 1.2rem; /* Reduce font size for smaller screens */
+    }
+  
+    .designation {
+      font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+  
+    .duration {
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+  
+    .project-title {
+      font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+  
+    .project-client {
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+  
+    .project-duration {
+      font-size: 0.8rem; /* Reduce font size for smaller screens */
+    }
+  }

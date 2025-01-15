@@ -1,0 +1,68 @@
+/* About Section Container */
+.about-section {
+    padding: 80px 20px;
+    color: white;
+    min-height: 100vh; /* Ensure the section fits the screen height */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+  }
+  
+  /* About Title */
+  .about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: cyan; /* Cyan color for the title */
+  }
+  
+  /* About Content */
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #444444; /* Slightly lighter gray for the box */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  }
+  
+  /* Paragraph Styles */
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0; /* Light gray for text */
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #555555; /* Darker gray for paragraphs */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .description:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.4); /* Cyan glow on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-title {
+      font-size: 1.8rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  }

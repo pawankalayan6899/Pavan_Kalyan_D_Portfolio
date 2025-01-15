@@ -1,593 +1,139 @@
-/* Importing Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
-
-/* General section styles */
-.section {
-    padding: 30px 30px;
-    text-align: center;
-    background-color: #121212; 
-    color: cyan; /* Light Gray */
-    font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */
-}
-
-/* Home Section Specific Styles */
-#home {
-    background-image: url('./assets/hf1.jpeg'); /* Path to your background image */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Don't repeat the image */
-    height: 100vh; /* Full height of the viewport */
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    color: yellow; /* Change text color for better contrast on the background */
-    font-size: 1.2rem;
-    background-attachment: fixed; /* For parallax effect */
-}
-
-/* Welcome Section */
-.welcome-title {
-    font-size: 4.5rem; /* Set font size */
-    color: white; /* Color for welcome title */
-    margin-top: -200px; /* Move the title up (adjust this value as needed) */
-    margin-bottom: 20px; /* Space below the welcome title */
-    font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */
-    font-Size: '2.5em';
-}
-
-.name-title {
-    font-size: 3.7rem; /* Set font size to match welcome title */
-    color: cyan; /* Color for the name title */
-    font-weight: bold; /* Bold text */
-    margin: 0; /* Reset margin */
-    font-family: 'Papyrus', fantasy; /* Use Papyrus font here */
-}
-
-.subtext {
-    font-size: 1.4rem; /* Font size for subtext */
-    color: white; /* Light Gray */
-    margin-top: 20px; /* Margin above the subtext */
-    font-family: 'Papyrus', fantasy; /* Use Papyrus font here */
-}
-
-/* Button Styles for CV Download */
-.download-cv-btn {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-}
-
-.download-cv-btn .button {
-    background-color: dodgerblue; /* Blue background */
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.download-cv-btn .button:hover {
-    background-color: gold;
-}
-
-/* Make sections fit the screen */
-#experience, #contact, #about, #skills {
-    height: 100vh; /* Ensures the section covers the entire screen */
-    padding: 20px;
-    background-color: #121212;
-    color: whitesmoke;
-    font-family: 'Times New Roman', serif;
-    display: flex;
-    align-items: center; /* Vertically centers the content */
-    justify-content: center; /* Horizontally centers the content */
-    flex-direction: column; /* Ensures content is in column layout */
-}
-
-#experience {
-    background-image: url('assets/workexpierence-new.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#experience {
-  background-attachment: fixed;
-}
-
-
-#contact {
-    background-color: #333333; /* Or any other color */
+/* Global Styles */
+body {
+    margin: 0;
     font-family: 'Rubik Vinyl', serif;
-    color: cyan;
-    font-size: 1.8rem;
-}
-
-.contact-form {
+    background-color: #121212; /* Dark background */
+    
+    line-height: 1.6;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Container for all sections */
+  .app {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-
-.form-input, .form-textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.button {
-    padding: 10px;
-    background-color: deepskyblue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #00bcd4;
-}
-
-/* Optional: Smooth scrolling for page navigation */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Mobile responsiveness for home section */
-@media (max-width: 768px) {
-    #home {
-        height: 100vh; /* Ensure full height */
-        background-size: cover;
-        background-position: center; /* Keep background centered */
-    }
-
-    .welcome-title {
-        font-size: 3.5rem; /* Adjust font size */
-    }
-
-    .name-title {
-        font-size: 2.5rem; /* Adjust font size */
-    }
-}
-
-@media (max-width: 480px) {
-    #home {
-        height: 100vh; /* Full height on small devices */
-        background-size: cover;
-        background-position: center; /* Keep background centered */
-    }
-
-    .welcome-title {
-        font-size: 2.5rem; /* Further adjust font size */
-        text-align: center;
-    }
-
-    .name-title {
-        font-size: 2rem;
-    }
-
-    .subtext {
-        font-size: 1rem;
-    }
-}
-
-/* General Styles for Social Icons */
-.social-icons {
-    display: center;
-    gap: 30px; /* Spacing between icons */
-}
-
-/* Default color for each social icon (using FontAwesome default colors) */
-.social-icons a {
-    font-size: 3rem; /* Set the size of the icons */
-    color: inherit; /* Inherit the default color for each icon */
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-/* Specific colors for each social icon */
-.social-icons .facebook {
-    color: #1877f2; /* Facebook blue */
-}
-
-.social-icons .instagram {
-    color: #c13584; /* Instagram purple */
-}
-
-.social-icons .linkedin {
-    color: #0077b5; /* LinkedIn blue */
-}
-
-.social-icons .github {
-    color: #333; /* GitHub black */
-}
-
-.social-icons .whatsapp {
-    color: #25d366; /* WhatsApp green */
-}
-
-/* Hover effect to change color to gold */
-.social-icons a:hover {
-    color: gold; /* Change color to gold when hovered */
-}
-
-/* Navbar Styling */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 3px 0.1px;
-    background: rgba(51, 51, 51, 0.9); /* Charcoal Black */
-    z-index: 1000;
-    transition: background 0.3s ease-in-out;
-    font-family: 'Papyrus', fantasy; /* Use Papyrus font here */
-    font-weight: 100;
-}
-
-.navbar.scrolled {
-    background: #333333; /* Charcoal Black */
-}
-
-.navbar img.logo {
-    height: 50px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 40px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: cyan; /* Dark Yellow */
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #FFFFFF; /* White */
-}
-
-#home {
-  background-attachment: fixed;
-}
-/* About Section */
-#about {
-  background-color: #333333; /* Charcoal Black */
-  background: linear-gradient(135deg, #444444, #333333); /* Subtle gradient */
-  padding: 80px 20px;
-  color: #FFD700; /* Dark Yellow */
-  text-align: center;
-  font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */
-  box-sizing: border-box;
-  min-height: 100vh; /* Ensure full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 70px;
-}
-
-/* Heading Styling */
-#about h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: cyan; /* Highlight Title */
-  margin-bottom: 20px;
-  letter-spacing: 1.5px;
-  
-}
-
-/* Paragraph Styling */
-#about p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #FFFFFF; /* White */
-  text-align: justify;
-  font-family: 'Times New Roman', Times, serif;
-  max-width: 800px; /* Limit width for readability */
-  margin: 0 auto; /* Center paragraph */
-  padding: 0 15px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-#about p span {
-  color: #FFD700; /* Highlight Technical Terms */
-  font-weight: bold;
-}
-
-/* Hover Effect for Paragraph */
-#about p:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #FFD700; /* Change text color on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  #about {
-    padding: 60px 20px;
   }
-
-  #about h2 {
+  
+  /* Section Padding */
+  .section {
+    padding: 80px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  h1 {
     font-size: 2.5rem;
   }
-
-  #about p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #about {
-    padding: 40px 10px;
-  }
-
-  #about h2 {
-    font-size: 2rem;
-  }
-
-  #about p {
-    font-size: 0.9rem;
-    padding: 0 10px;
-  }
-}
-
-/* Ensure the content doesn't overflow */
-body {
-  overflow-x: hidden;
-}
-
-
-/* Skills Section */
-#skills {
-    background-color: #333333; /* Charcoal Black */
-    padding: 100px 20px;
-    display: flex; /* Flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    flex-direction: column; /* Stack child elements vertically */
-    font-size: 2.5em;
-    height: 100vh; /* Full height to ensure it fits the screen */
-    box-sizing: border-box; /* Ensures padding is included in height calculation */
-}
-
-.skills-box h2 {
-    font-size: 2.5rem; /* Increase font size */
-    margin-bottom: 20px;
-    color: cyan; /* Cyan */
-    text-align: center;
-    font-family: 'Rubik Vinyl', serif; /* Use Rubik Vinyl font here */
-}
-
-.skills-box ul {
-    padding-left: 150px;
-    text-align: left;
-    font-family: 'Times New Roman', Times, serif; /* Use Times New Roman here */
-}
-
-.skills-box ul li {
-    font-size: 1rem;
-    color: #FFFFFF; /* White */
-    margin-bottom: 10px;
-}
-
-/* Image Container Adjustments */
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 45px;
-    margin-bottom: 20px;
-}
-
-/* Image Bubble Effect */
-.img-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-wrapper img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Complete circle */
-    border: 2px solid #FFD700; /* Gold color border */
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Glow effect for bubble */
-}
-
-/* Hover Bubble Effect */
-.img-wrapper img:hover {
-    opacity: 0.8;
-    transform: scale(1.1); /* Slightly larger */
-    box-shadow: 0 0 30px rgba(255, 215, 0, 1); /* Intense glow on hover */
-}
-
-/* Media Queries for Responsiveness */
-
-/* For tablets and smaller screens */
-@media (max-width: 768px) {
-    #skills {
-        padding: 80px 10px;
-        font-size: 2rem; /* Adjust font size for smaller screens */
-    }
-
-    .skills-box h2 {
-        font-size: 2rem; /* Adjust font size for the heading */
-    }
-
-    .skills-box ul {
-        padding-left: 100px; /* Adjust list padding */
-    }
-
-    .image-container {
-        gap: 30px; /* Reduce gap between images */
-    }
-
-    .img-wrapper img {
-        width: 70px;
-        height: 70px; /* Adjust size for smaller screens */
-    }
-}
-
-/* For mobile devices */
-@media (max-width: 480px) {
-    #skills {
-        padding: 60px 10px;
-        font-size: 1.5rem; /* Adjust font size for mobile */
-    }
-
-    .skills-box h2 {
-        font-size: 1.8rem; /* Adjust font size for the heading */
-    }
-
-    .skills-box ul {
-        padding-left: 20px; /* Adjust list padding */
-    }
-
-    .image-container {
-        gap: 20px; /* Reduce gap for mobile */
-    }
-
-    .img-wrapper img {
-        width: 50px;
-        height: 50px; /* Further adjust image size for mobile */
-    }
-}
-
-/* Projects Section */
-#projects {
-    background-color: #333333; /* Charcoal Black */
-    padding: 100px 20px;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: justify;
-    line-height: 1.5; /* Adjust line spacing for paragraphs */
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
-}
-
-.project-card {
-    background: #444444; /* Slightly lighter Charcoal Black */
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
-}
-
-.project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 15px;
-}
-
-.project-title {
+  
+  h2 {
     font-size: 1.5rem;
-    color: #FFD700; /* Dark Yellow */
-    margin-bottom: 10px; /* Adjust title spacing */
-}
 
-.project-description {
-    font-size: 1rem;
-    color: #FFFFFF; /* White */
-    margin-bottom: 10px; /* Adjust paragraph spacing */
-    line-height: 1.4; /* Reduce line spacing */
-}
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    
+  }
+  
+  p {
+    font-size: 1.2rem;
 
-.project-details {
-    font-family: 'Times New Roman', Times, serif; /* Use Times New Roman here */
-    word-spacing: normal;
-    font-size: 1rem; /* Standard readable font size */
-    color: #FFFFFF; /* White text color */
-    line-height: 1.6; /* Consistent spacing between lines */
-    margin: 0; /* Remove unnecessary margins */
-    padding: 0; /* Add padding for better spacing */
-}
-
-.project-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #FFFFFF; /* White */
-    color: #333333; /* Charcoal Black */
-    border-radius: 5px;
+  }
+  
+  /* Links */
+  a {
+    color: cyan;
     text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #FFD700; /* Dark Yellow */
-    color: #333333; /* Charcoal Black */
-}
-
-/* Contact Section */
-#contact {
-    background-color: #333333; /* Charcoal Black */
-    padding: 100px 20px;
-    color: cyan; /* Dark Yellow */
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-input, .form-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #FFFFFF; /* White */
-    border-radius: 5px;
-    background-color: #444444; /* Slightly lighter Charcoal Black */
-    color: #FFD700; /* Dark Yellow */
-}
-
-.form-input:focus, .form-textarea:focus {
-    outline: none;
-    border-color: #FFD700; /* Dark Yellow */
-}
-
-.button {
-    background-color: #FFFFFF; /* White */
-    color: #333333; /* Charcoal Black */
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: gold; /* Gold color on hover */
+  }
+  
+  /* Buttons */
+  .button {
+    
+    color: #333333;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    font-weight: bold;
-}
-
-.button:hover {
-    background-color: #FFD700; /* Dark Yellow */
-    color: #333333; /* Charcoal Black */
-}
-
-/* Footer */
-.footer {
-    background-color: #333333; /* Charcoal Black */
-    color: #FFD700; /* Dark Yellow */
-    padding: 20px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: gold;
+  }
+  
+  /* Utility Classes */
+  .text-center {
     text-align: center;
-    font-size: 0.9rem;
-    font-family: 'Rubik Vinyl', serif;
-}
+  }
+  
+  .max-w-800 {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .max-w-1200 {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .section {
+      padding: 60px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    .section {
+      padding: 40px 10px;
+    }
+  }
